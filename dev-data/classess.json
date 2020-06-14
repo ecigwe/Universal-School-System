@@ -1,0 +1,18 @@
+{
+    "title": "SS 2",
+    "formTeacher": "5ed2baf8ca1dbc1d6c0095d8",
+    "prefect": "5ed2bbf7ca1dbc1d6c00962e",
+    "term": 1,
+    "students": [
+        "5ecf9935dca4071ddc002088",
+        "5ecf9935dca4071ddc002089",
+        "5ecf9935dca4071ddc00208b",
+        "5ecf9935dca4071ddc00208e",
+        "5ecf9935dca4071ddc00208d"
+    ],
+    "numOfBoys": 12,
+    "numOfGirls": 23,
+    "year": "2020",
+    "population": 35,
+    "school": "5ecb08dfd2595416f0dc9977"
+}

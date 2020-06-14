@@ -1,11 +1,12 @@
 
-function responseHandler(response, result, next, statusCode, message) {
+function responseHandler(response, result, next, statusCode, message, numOfResults) {
   if (result instanceof Error) {
-    next(result);
+    return next(result);
   } else {
-    response.status(statusCode).json({
+    return response.status(statusCode).json({
       status: 'success',
       message,
+      results: numOfResults,
       data: result
     });
   }

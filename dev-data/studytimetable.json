@@ -1,0 +1,121 @@
+[
+    {
+        "authorCategory": "Student",
+        "category": "Study",
+        "_id": "5ed3d0094f59050e5097861d",
+        "monday": [
+            {
+                "_id": "5ed3d0094f59050e5097861e",
+                "subject": "Math",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e5097861f",
+                "subject": "English",
+                "numOfStudyHours": "1 hour",
+                "start": "7pm",
+                "stop": "8pm"
+            }
+        ],
+        "tuesday": [
+            {
+                "_id": "5ed3d0094f59050e50978620",
+                "subject": "Physics",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e50978621",
+                "subject": "Chemistry",
+                "numOfStudyHours": "1 hour",
+                "start": "7pm",
+                "stop": "8pm"
+            }
+        ],
+        "wednesday": [
+            {
+                "_id": "5ed3d0094f59050e50978622",
+                "subject": "Biology",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e50978623",
+                "subject": "Agric",
+                "numOfStudyHours": "1 hour",
+                "start": "7pm",
+                "stop": "8pm"
+            }
+        ],
+        "thursday": [
+            {
+                "_id": "5ed3d0094f59050e50978624",
+                "subject": "CRS",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e50978625",
+                "subject": "Civic",
+                "numOfStudyHours": "1 hour",
+                "start": "6:30pm",
+                "stop": "7:30pm"
+            }
+        ],
+        "friday": [
+            {
+                "_id": "5ed3d0094f59050e50978626",
+                "subject": "Further Maths",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e50978627",
+                "subject": "Government",
+                "numOfStudyHours": "1 hour",
+                "start": "7pm",
+                "stop": "8pm"
+            }
+        ],
+        "saturday": [
+            {
+                "_id": "5ed3d0094f59050e50978628",
+                "subject": "Literature",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e50978629",
+                "subject": "English",
+                "numOfStudyHours": "1 hour",
+                "start": "7pm",
+                "stop": "8pm"
+            }
+        ],
+        "sunday": [
+            {
+                "_id": "5ed3d0094f59050e5097862a",
+                "subject": "Math",
+                "numOfStudyHours": "1 hour",
+                "start": "5pm",
+                "stop": "6pm"
+            },
+            {
+                "_id": "5ed3d0094f59050e5097862b",
+                "subject": "Chemistry",
+                "numOfStudyHours": "1 hour",
+                "start": "7pm",
+                "stop": "8pm"
+            }
+        ],
+        "authorUsername": "lawrenceayantola84",
+        "__v": 0
+    }
+]

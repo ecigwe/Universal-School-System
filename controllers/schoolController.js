@@ -1,8 +1,6 @@
 const responseHandler = require('../utils/responseHandler');
-const errorHandler = require('../utils/errorHandler');
-const School = require('../models/schools/school');
-const mongoose = require('mongoose');
-
+const errorHandler = require('../utils/errorUtils/errorHandler');
+const School = require('../models/school/school');
 
 class SchoolController {
 
@@ -17,16 +15,10 @@ class SchoolController {
     */
     static async createSchool(req, res, next) {
         try {
-            const existingSchool = await School.findOne({
-                name: req.body.name,
-                address: req.body.address,
-            });
-
-            if (existingSchool) {
-                return errorHandler(409, 'School already exists')
-            }
-
             const registeredOn = Date();
+
+            if (req.body.isSubscribed) req.body.isSubscribed = false; //Only when payment is made can a school be subscribed
+            if (req.body.phoneNumber) req.body.phoneNumber = "+234" + req.body.phoneNumber;
 
             const school = new School({
                 ...req.body, registeredOn
@@ -34,7 +26,7 @@ class SchoolController {
             const result = await school.save();
 
             return responseHandler(res, result,
-                next, 201, 'School successfully created');
+                next, 201, 'School successfully created', 1);
         } catch (error) {
             console.log(error)
             return next(error);
@@ -53,7 +45,7 @@ class SchoolController {
     static async getAllSchools(req, res, next) {
         try {
             const schools = await School.find();
-            responseHandler(res, schools, next, 200, 'Schools retrieved successfully')
+            return responseHandler(res, schools, next, 200, 'Schools retrieved successfully', schools.length);
         } catch (error) {
             return next(error);
         }
@@ -71,17 +63,12 @@ class SchoolController {
     */
     static async getSchool(req, res, next) {
         try {
-            if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-
-                return errorHandler(400, 'Invalid request parameter');
-            }
-
             const school = await School.findById(req.params.id);
             if (!school) {
                 return errorHandler(404, 'School not found');
             }
 
-            return responseHandler(res, school, next, 200, 'School retrieved successfully');
+            return responseHandler(res, school, next, 200, 'School retrieved successfully', 1);
         } catch (error) {
             return next(error);
         }
@@ -98,10 +85,6 @@ class SchoolController {
     */
     static async updateSchool(req, res, next) {
         try {
-            if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-                return errorHandler(400, 'Invalid request parameter');
-            }
-
             const school = await School.findById(req.params.id);
             if (!school) {
                 return errorHandler(404, 'School not found');
@@ -113,7 +96,7 @@ class SchoolController {
 
             const result = await school.save({ validateBeforeSave: true });
 
-            return responseHandler(res, result, next, 200, 'School updated successfully');
+            return responseHandler(res, result, next, 200, 'School updated successfully', 1);
         } catch (error) {
             next(error);
         }
@@ -129,15 +112,15 @@ class SchoolController {
      * @memberof SchoolController
     */
     static async deleteSchool(req, res, next) {
-        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-            return errorHandler(400, 'Invalid request parameter');
+        try {
+            const result = await School.findByIdAndDelete(req.params.id);
+            if (!result) {
+                return errorHandler(404, 'Not found');
+            }
+            return responseHandler(res, null, next, 204, 'School deleted sucessfully', 1);
+        } catch (error) {
+            return next(error);
         }
-        const result = await School.findByIdAndRemove(req.params.id);
-        if (!result) {
-            return errorHandler(404, 'Not found');
-        }
-        return responseHandler(res, null, next, 204, 'School deleted sucessfully');
-
     }
 }
 

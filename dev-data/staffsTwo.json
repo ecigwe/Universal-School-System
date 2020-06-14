@@ -1,0 +1,968 @@
+[
+    {
+        "fullname": "Bukola Samson Ayantola",
+        "email": "BukolaAyantola@gmail.com",
+        "username": "bukolaayantola18",
+        "phoneNumber": "+2348169416777",
+        "role": "Principal",
+        "category": "Staff",
+        "subjects": [
+            "Biology",
+            "Basic Technology"
+        ],
+        "classes": [
+            "Basic 3",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Godswill Kevin Afolabi",
+        "email": "GodswillAfolabi@gmail.com",
+        "username": "godswillafolabi76",
+        "phoneNumber": "+2349069516811",
+        "role": "Vice-Principal",
+        "category": "Staff",
+        "subjects": [
+            "Chemistry",
+            "Basic Technology"
+        ],
+        "classes": [
+            "Basic 3",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Amara Victoria Okoli",
+        "email": "AmaraOkoli@aol.com",
+        "username": "amaraokoli25",
+        "phoneNumber": "+2349069616845",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Hausa Language",
+            "Mathematics"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Amake Victoria Mmuoma",
+        "email": "AmakeMmuoma@gmail.com",
+        "username": "amakemmuoma15",
+        "phoneNumber": "+2348169716879",
+        "role": "Bursar",
+        "category": "Staff",
+        "subjects": [
+            "Chemistry",
+            "Physics"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Bbatunde John Obasola",
+        "email": "BbatundeObasola@outlook.com",
+        "username": "bbatundeobasola39",
+        "phoneNumber": "+2347069816913",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Accounting",
+            "Accounting"
+        ],
+        "classes": [
+            "SS 2",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Abuchi Grace Onyebuchi",
+        "email": "AbuchiOnyebuchi@outlook.com",
+        "username": "abuchionyebuchi13",
+        "phoneNumber": "+2348169916947",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Chemistry",
+            "Accounting"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Aisha Jumoke Mmaduka",
+        "email": "AishaMmaduka@outlook.com",
+        "username": "aishammaduka13",
+        "phoneNumber": "+2348170016981",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Yoruba Language",
+            "Chemistry"
+        ],
+        "classes": [
+            "Basic 2",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Amake Chioma Olamide",
+        "email": "AmakeOlamide@hotmail.com",
+        "username": "amakeolamide13",
+        "phoneNumber": "+2348170117015",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Physics",
+            "Chemistry"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Samuel Joseph Bbatunde",
+        "email": "SamuelBbatunde@aol.com",
+        "username": "samuelbbatunde14",
+        "phoneNumber": "+2349070217049",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Igbo Language"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Yemi Emeka Effiong",
+        "email": "YemiEffiong@outlook.com",
+        "username": "yemieffiong59",
+        "phoneNumber": "+2347070317083",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic science",
+            "Yoruba Language"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9977",
+        "verified": true
+    },
+    {
+        "fullname": "Amake Yemi Solarin",
+        "email": "AmakeSolarin@outlook.com",
+        "username": "amakesolarin63",
+        "phoneNumber": "+2348170417117",
+        "role": "Principal",
+        "category": "Staff",
+        "subjects": [
+            "Accounting",
+            "Biology"
+        ],
+        "classes": [
+            "Basic 1",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Azeez Moses Obasola",
+        "email": "AzeezObasola@outlook.com",
+        "username": "azeezobasola27",
+        "phoneNumber": "+2347070517151",
+        "role": "Vice-Principal",
+        "category": "Staff",
+        "subjects": [
+            "Geography",
+            "History"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Adewale Musa Mbanefo",
+        "email": "AdewaleMbanefo@outlook.com",
+        "username": "adewalembanefo10",
+        "phoneNumber": "+2348170617185",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Hausa Language"
+        ],
+        "classes": [
+            "Basic 3",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Bunmi Mary Obasola",
+        "email": "BunmiObasola@gmail.com",
+        "username": "bunmiobasola21",
+        "phoneNumber": "+2349070717219",
+        "role": "Bursar",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Accounting"
+        ],
+        "classes": [
+            "Basic 3",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Mary Chioma Lawnson",
+        "email": "MaryLawnson@aol.com",
+        "username": "marylawnson50",
+        "phoneNumber": "+2349070817253",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic science",
+            "Geography"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Sunday Chiamaka Eze",
+        "email": "SundayEze@hotmail.com",
+        "username": "sundayeze10",
+        "phoneNumber": "+2348170917287",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Accounting",
+            "Biology"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Eketi Habbeeb Abdul",
+        "email": "EketiAbdul@gmail.com",
+        "username": "eketiabdul38",
+        "phoneNumber": "+2347071017321",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic science",
+            "Mathematics"
+        ],
+        "classes": [
+            "Basic 3",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Folake Funsho Awolowo",
+        "email": "FolakeAwolowo@gmail.com",
+        "username": "folakeawolowo3",
+        "phoneNumber": "+2347071117355",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Hausa Language",
+            "Hausa Language"
+        ],
+        "classes": [
+            "Basic 3",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "John Habbeeb Olanrewaju",
+        "email": "JohnOlanrewaju@aol.com",
+        "username": "johnolanrewaju68",
+        "phoneNumber": "+2349071217389",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Basic science"
+        ],
+        "classes": [
+            "Basic 2",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Musa Emeka Doyle",
+        "email": "MusaDoyle@aol.com",
+        "username": "musadoyle77",
+        "phoneNumber": "+2347071317423",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Physics",
+            "Accounting"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9976",
+        "verified": true
+    },
+    {
+        "fullname": "Funsho Monday Ikokwu",
+        "email": "FunshoIkokwu@hotmail.com",
+        "username": "funshoikokwu90",
+        "phoneNumber": "+2347071417457",
+        "role": "Principal",
+        "category": "Staff",
+        "subjects": [
+            "Accounting",
+            "Chemistry"
+        ],
+        "classes": [
+            "SS 2",
+            "Basic 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Chiamaka Amake Olamide",
+        "email": "ChiamakaOlamide@outlook.com",
+        "username": "chiamakaolamide30",
+        "phoneNumber": "+2348171517491",
+        "role": "Vice-Principal",
+        "category": "Staff",
+        "subjects": [
+            "Basic science",
+            "Mathematics"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Bukola Maria Obi",
+        "email": "BukolaObi@gmail.com",
+        "username": "bukolaobi44",
+        "phoneNumber": "+2349071617525",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic science",
+            "Geography"
+        ],
+        "classes": [
+            "Basic 3",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Wasiu Chinyere Effiong",
+        "email": "WasiuEffiong@gmail.com",
+        "username": "wasiueffiong29",
+        "phoneNumber": "+2349071717559",
+        "role": "Bursar",
+        "category": "Staff",
+        "subjects": [
+            "Biology",
+            "Hausa Language"
+        ],
+        "classes": [
+            "Basic 2",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Matthew Sophia Abdul",
+        "email": "MatthewAbdul@aol.com",
+        "username": "matthewabdul36",
+        "phoneNumber": "+2349071817593",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Chemistry",
+            "Geography"
+        ],
+        "classes": [
+            "Basic 1",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Moses Emeka Omo-ojuile",
+        "email": "MosesOmo-ojuile@hotmail.com",
+        "username": "mosesomo-ojuile82",
+        "phoneNumber": "+2348171917627",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Biology",
+            "Mathematics"
+        ],
+        "classes": [
+            "SS 1",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Folake Samson Oputa",
+        "email": "FolakeOputa@aol.com",
+        "username": "folakeoputa67",
+        "phoneNumber": "+2347072017661",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Accounting",
+            "Basic Technology"
+        ],
+        "classes": [
+            "Basic 2",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Ama Chikaodili Mohammed",
+        "email": "AmaMohammed@gmail.com",
+        "username": "amamohammed43",
+        "phoneNumber": "+2348172117695",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Accounting",
+            "Yoruba Language"
+        ],
+        "classes": [
+            "Basic 3",
+            "Basic 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Yemi Funsho Ganiyu",
+        "email": "YemiGaniyu@gmail.com",
+        "username": "yemiganiyu13",
+        "phoneNumber": "+2347072217729",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Chemistry"
+        ],
+        "classes": [
+            "Basic 3",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Temidayo Ibukun Mbanefo",
+        "email": "TemidayoMbanefo@aol.com",
+        "username": "temidayombanefo9",
+        "phoneNumber": "+2347072317763",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic Technology",
+            "Basic science"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9979",
+        "verified": true
+    },
+    {
+        "fullname": "Ngozi Hannah Cole",
+        "email": "NgoziCole@outlook.com",
+        "username": "ngozicole43",
+        "phoneNumber": "+2347072417797",
+        "role": "Principal",
+        "category": "Staff",
+        "subjects": [
+            "Yoruba Language",
+            "Yoruba Language"
+        ],
+        "classes": [
+            "SS 1",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Folake Chiamaka George",
+        "email": "FolakeGeorge@outlook.com",
+        "username": "folakegeorge89",
+        "phoneNumber": "+2348172517831",
+        "role": "Vice-Principal",
+        "category": "Staff",
+        "subjects": [
+            "Geography",
+            "Physics"
+        ],
+        "classes": [
+            "SS 3",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Fariat Sunday Olasupo",
+        "email": "FariatOlasupo@aol.com",
+        "username": "fariatolasupo30",
+        "phoneNumber": "+2348172617865",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Physics",
+            "Geography"
+        ],
+        "classes": [
+            "SS 1",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Esther Sunday Cole",
+        "email": "EstherCole@gmail.com",
+        "username": "esthercole13",
+        "phoneNumber": "+2349072717899",
+        "role": "Bursar",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Chemistry"
+        ],
+        "classes": [
+            "Basic 2",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Imaobong Ogechi Omo-ojuile",
+        "email": "ImaobongOmo-ojuile@aol.com",
+        "username": "imaobongomo-ojuile27",
+        "phoneNumber": "+2348172817933",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Yoruba Language",
+            "Igbo Language"
+        ],
+        "classes": [
+            "SS 1",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Habbeeb Folake Olanrewaju",
+        "email": "HabbeebOlanrewaju@gmail.com",
+        "username": "habbeebolanrewaju30",
+        "phoneNumber": "+2349072917967",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic Technology",
+            "Geography"
+        ],
+        "classes": [
+            "SS 1",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Umaru Lawrence Edet",
+        "email": "UmaruEdet@hotmail.com",
+        "username": "umaruedet3",
+        "phoneNumber": "+2347073018001",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Geography",
+            "Chemistry"
+        ],
+        "classes": [
+            "Basic 2",
+            "Basic 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Ngozi Amara Okafor",
+        "email": "NgoziOkafor@hotmail.com",
+        "username": "ngoziokafor65",
+        "phoneNumber": "+2347073118035",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Hausa Language",
+            "Basic science"
+        ],
+        "classes": [
+            "SS 2",
+            "Basic 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Teslim Ogechi Olasupo",
+        "email": "TeslimOlasupo@hotmail.com",
+        "username": "teslimolasupo66",
+        "phoneNumber": "+2347073218069",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Basic science",
+            "Physics"
+        ],
+        "classes": [
+            "SS 2",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Ebuka Anthony Okeke",
+        "email": "EbukaOkeke@gmail.com",
+        "username": "ebukaokeke85",
+        "phoneNumber": "+2348173318103",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Yoruba Language",
+            "Yoruba Language"
+        ],
+        "classes": [
+            "SS 2",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9975",
+        "verified": true
+    },
+    {
+        "fullname": "Emeka Ngozi Solarin",
+        "email": "EmekaSolarin@hotmail.com",
+        "username": "emekasolarin88",
+        "phoneNumber": "+2347073418137",
+        "role": "Principal",
+        "category": "Staff",
+        "subjects": [
+            "Chemistry",
+            "Igbo Language"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9978",
+        "verified": true
+    },
+    {
+        "fullname": "Chioma Chiamaka Mohammed",
+        "email": "ChiomaMohammed@aol.com",
+        "username": "chiomamohammed33",
+        "phoneNumber": "+2348173518171",
+        "role": "Vice-Principal",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Mathematics"
+        ],
+        "classes": [
+            "Basic 1",
+            "Basic 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9978",
+        "verified": true
+    },
+    {
+        "fullname": "Amara Matthew Idika",
+        "email": "AmaraIdika@aol.com",
+        "username": "amaraidika87",
+        "phoneNumber": "+2347073618205",
+        "role": "Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Geography",
+            "Biology"
+        ],
+        "classes": [
+            "SS 3",
+            "SS 2"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9978",
+        "verified": true
+    },
+    {
+        "fullname": "Gbemisola Folake Nweke",
+        "email": "GbemisolaNweke@aol.com",
+        "username": "gbemisolanweke50",
+        "phoneNumber": "+2348173718239",
+        "role": "Bursar",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Basic science"
+        ],
+        "classes": [
+            "SS 1",
+            "SS 1"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9978",
+        "verified": true
+    },
+    {
+        "fullname": "Juliet Imaobong Akintunde",
+        "email": "JulietAkintunde@outlook.com",
+        "username": "julietakintunde1",
+        "phoneNumber": "+2349073818273",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Mathematics",
+            "Accounting"
+        ],
+        "classes": [
+            "Basic 2",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9978",
+        "verified": true
+    },
+    {
+        "fullname": "Titilayo Abubakar Bbatunde",
+        "email": "TitilayoBbatunde@outlook.com",
+        "username": "titilayobbatunde65",
+        "phoneNumber": "+2349073918307",
+        "role": "Form-Teacher",
+        "category": "Staff",
+        "subjects": [
+            "Biology",
+            "Physics"
+        ],
+        "classes": [
+            "Basic 3",
+            "SS 3"
+        ],
+        "active": true,
+        "password": "qwerty12345",
+        "confirmPassword": "qwerty12345",
+        "school": "5ecb08dfd2595416f0dc9978",
+        "verified": true
+    }
+]

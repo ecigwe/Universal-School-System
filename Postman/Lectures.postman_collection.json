@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "5003e8b2-3324-4668-b018-5ffa637b2cf1",
+		"name": "Lectures",
+		"description": "This collection consits of endpoints relating to performing CRUD operations on lectures for classes in a school.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Lecture For A Class In A School",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Basic Greetings\",\n\t\"subject\": \"Hausa Language\",\n\t\"description\": \"This lecture introduces you to the basic terminologies used in greeting people with the Hausa Language.\",\n\t\"studyDuration\": \"2 hours\",\n\t\"linksToLearningResources\": [\"www.hausa.com\", \"www.hausalanguage.com\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures"
+					]
+				},
+				"description": "Teachers can use this endpoint to create a lecture for a class of students in a school."
+			},
+			"response": [
+				{
+					"name": "Create Lecture For A Class In A School",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Basic Greetings\",\n\t\"subject\": \"Hausa Language\",\n\t\"studyDuration\": \"2 hours\",\n\t\"linksToLearningResources\": [\"www.hausa.com\", \"www.hausalanguage.com\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed6342c00bcd51aac488490",
+								"lectures"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "1000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "999"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jun 2020 11:41:25 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1591101660"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "394"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18a-L0tb5g3MYPTDEosEcDPwmMxInwc\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Lecture Created Successfully\",\n    \"results\": 1,\n    \"data\": {\n        \"materials\": [],\n        \"linksToLearningResources\": [\n            \"www.hausa.com\",\n            \"www.hausalanguage.com\"\n        ],\n        \"_id\": \"5ed63af732bb7e171cdf3127\",\n        \"title\": \"Basic Greetings\",\n        \"subject\": \"Hausa Language\",\n        \"studyDuration\": \"2 hours\",\n        \"school\": \"5ecb08dfd2595416f0dc9977\",\n        \"class\": \"5ed6342c00bcd51aac488490\",\n        \"teacher\": \"5ed2baf8ca1dbc1d6c0095d6\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve Lecture Resources For A Class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures"
+					],
+					"query": [
+						{
+							"key": "subject",
+							"value": "Hausa Language",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Basic Greetings",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Students and teachers can use this endpoint to retrieve the lecture resources for a particular class."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lecture For A Class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures/5eda4b5154284e03f8c8c1db",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures",
+						"5eda4b5154284e03f8c8c1db"
+					]
+				},
+				"description": "Students and teachers can use this endpoint to retrieve a specific lecture pertaining to a class in a school."
+			},
+			"response": [
+				{
+					"name": "Get Lecture For A Class",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures/5ed63af732bb7e171cdf3127",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed6342c00bcd51aac488490",
+								"lectures",
+								"5ed63af732bb7e171cdf3127"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "1000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "997"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jun 2020 14:04:26 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1591110145"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "414"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19e-25oX8fE4lZInGJW2/kKJFso2Sqc\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved the lecture you requested\",\n    \"results\": 1,\n    \"data\": {\n        \"materials\": [],\n        \"linksToLearningResources\": [\n            \"www.hausa.com\",\n            \"www.hausalanguage.com\"\n        ],\n        \"_id\": \"5ed63af732bb7e171cdf3127\",\n        \"title\": \"Basic Greetings\",\n        \"subject\": \"Hausa Language\",\n        \"studyDuration\": \"2 hours\",\n        \"school\": \"5ecb08dfd2595416f0dc9977\",\n        \"class\": \"5ed6342c00bcd51aac488490\",\n        \"teacher\": \"5ed2baf8ca1dbc1d6c0095d6\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Lecture For A Class",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject",
+							"value": "Hausa Language",
+							"type": "text"
+						},
+						{
+							"key": "materials",
+							"type": "file",
+							"src": "/C:/Users/hp/Documents/IMMANUEL/THINGS TO DO BETWEEN NOW and AGE 30.docx"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures/5eda4b5154284e03f8c8c1db",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures",
+						"5eda4b5154284e03f8c8c1db"
+					]
+				},
+				"description": "Teachers can use this endpoint to update the lecture details of any subject that they teach students of a class in a particular school."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Lecture For A Class",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures/5eda4b5154284e03f8c8c1db",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures",
+						"5eda4b5154284e03f8c8c1db"
+					]
+				},
+				"description": "Teachers can use this endpoint to delete the lecture details of any subject that they teach students of a class in a particular school."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Lecture Resource",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures/5eda4b5154284e03f8c8c1db/resource/1Yb1NBZoMrd44id19BHPnbCgsDLFyUssY",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures",
+						"5eda4b5154284e03f8c8c1db",
+						"resource",
+						"1Yb1NBZoMrd44id19BHPnbCgsDLFyUssY"
+					]
+				},
+				"description": "A class teacher can use this endpoint to delete a previously uploaded lecture resource."
+			},
+			"response": []
+		},
+		{
+			"name": "Download a lecture resource",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed6342c00bcd51aac488490/lectures/5eda4b5154284e03f8c8c1db/resource/1KJmRRlOWDfVRIDH-k13iUXLCsE26y9E9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schools",
+						"5ecb08dfd2595416f0dc9977",
+						"classes",
+						"5ed6342c00bcd51aac488490",
+						"lectures",
+						"5eda4b5154284e03f8c8c1db",
+						"resource",
+						"1KJmRRlOWDfVRIDH-k13iUXLCsE26y9E9"
+					]
+				},
+				"description": "Students and teachers can use this endpoint to download a lecture note or an audio lecture or a video lecture, whenever lecture resources are uploaded for a particular lecture."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

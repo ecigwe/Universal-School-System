@@ -1,0 +1,1929 @@
+{
+	"info": {
+		"_postman_id": "aba570ba-5a49-453f-9f87-9cb5211e38b1",
+		"name": "Glow Elearn Project",
+		"description": "This collection is a continuation of the universal school system collection.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reset Password",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Admin Forgot Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ce4bf3dd-ad62-4445-ba8b-fbb9a82d83d6",
+										"exec": [
+											"pm.environment.set(\"RESETCODE\", pm.response.json().resetCode);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phoneNumber\": \"9064058820\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/admin/forgot_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"forgot_password"
+									]
+								},
+								"description": "This endpoint should be used by the administrators of the platform as the first stage of resetting their password, where a reset token is sent to their mobile phone as a text message."
+							},
+							"response": []
+						},
+						{
+							"name": "Actual Reset Of Password",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"resetCode\": \"{{RESETCODE}}\",\n\t\"newPassword\": \"{{NEWPASSWORD}}\",\n\t\"confirmNewPassword\": \"{{NEWPASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/admin/reset_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"reset_password"
+									]
+								},
+								"description": "This is the final stage in the password reset process, where an administrator of the platform's software sends the recieved reset token along with his new password and a confirmation of the new password."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Parent",
+					"item": [
+						{
+							"name": "Parent Forgot Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bdd0ee3b-3977-4596-9802-0f82c0f0672a",
+										"exec": [
+											"pm.environment.set(\"RESETCODE\", pm.response.json().resetCode);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phoneNumber\": \"7069416777\"\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/parent/forgot_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"parent",
+										"forgot_password"
+									]
+								},
+								"description": "This endpoint should be used by the parents registered on the platform as the first stage of resetting their password, where a reset token is sent to their mobile phone as a text message."
+							},
+							"response": []
+						},
+						{
+							"name": "Parent Reset Password",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"resetCode\": \"{{RESETCODE}}\",\n\t\"newPassword\": \"{{NEWPASSWORD}}\",\n\t\"confirmNewPassword\": \"{{NEWPASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/parent/reset_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"parent",
+										"reset_password"
+									]
+								},
+								"description": "This is the final stage in the password reset process, where an administrator of the platform's software sends the recieved reset token along with his new password and a confirmation of the new password."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Staff",
+					"item": [
+						{
+							"name": "Staff Forgot Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "854c2887-6da3-4306-a729-4842d0fc2517",
+										"exec": [
+											"pm.environment.set(\"RESETCODE\", pm.response.json().resetCode);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phoneNumber\": \"9069616845\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/staff/forgot_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"staff",
+										"forgot_password"
+									]
+								},
+								"description": "This endpoint should be used by the staff officials of schools registered on the platform as the first stage of resetting their password, where a reset token is sent to their mobile phone as a text message."
+							},
+							"response": []
+						},
+						{
+							"name": "Staff Reset Password",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"resetCode\": \"{{RESETCODE}}\",\n\t\"newPassword\": \"{{NEWPASSWORD}}\",\n\t\"confirmNewPassword\": \"{{NEWPASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/staff/reset_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"staff",
+										"reset_password"
+									]
+								},
+								"description": "This is the final stage in the password reset process, where a school's staff official registered on the platform sends the recieved reset token along with his new password and a confirmation of the new password."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "Student Forgot Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a4fbf018-d9be-43b4-a674-54d9ac7a19c9",
+										"exec": [
+											"pm.environment.set(\"RESETCODE\", pm.response.json().resetCode);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phoneNumber\": \"7071217389\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/student/forgot_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"student",
+										"forgot_password"
+									]
+								},
+								"description": "This endpoint should be used by the students of schools registered on the platform as the first stage of resetting their password, where a reset token is sent to their mobile phone as a text message."
+							},
+							"response": []
+						},
+						{
+							"name": "Student Reset Password",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"resetCode\": \"{{RESETCODE}}\",\n\t\"newPassword\": \"{{NEWPASSWORD}}\",\n\t\"confirmNewPassword\": \"{{NEWPASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/student/reset_password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"student",
+										"reset_password"
+									]
+								},
+								"description": "This is the final stage in the password reset process, where a school's student registered on the platform sends the recieved reset token along with his new password and a confirmation of the new password."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "This folder contains the endpoints needed for resetting the password of any user who has forgotten their password.\r\nThe user must first make a post request to the forgot password route with their phone number.\r\nThey will recieve a code in a text message.\r\nThey must send that code, their new password and a confirmation of that new password in a patch request to the reset password route.\r\nIf the code is vaild and it's time limit has not expired, the user's password will be successfully reset and the user will be logged in automatically.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4cdd1dc7-ad22-4ba1-bcff-6d8ed81ebf13",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8852a34-8a28-43dc-8fdb-0e4201d482d7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"title\":\"New School Physics\",\n\"author\":\"M Anyakoha\",\n\"class\":\"Senior Secondary\",\n\"category\": \"Textbook\",\n\"price\": 3000,\n\"bookUrl\":\"www.example.com\",\n\"imageUrl\": \"www.books.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"school",
+								"5ecb08dfd2595416f0dc9975",
+								"books"
+							]
+						},
+						"description": "This creates a book for a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"school",
+								"5ecb08dfd2595416f0dc9975",
+								"books"
+							]
+						},
+						"description": "This retrieves all the books for a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books/5ecd16c602080c21c0e5ee87",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books/5ecd16c602080c21c0e5ee87",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"school",
+								"5ecb08dfd2595416f0dc9975",
+								"books",
+								"5ecd16c602080c21c0e5ee87"
+							]
+						},
+						"description": "This retrieves a single book belonging to a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books/5ecd16c602080c21c0e5ee87",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"title\":\"New School Mathematics\",\n\"class\":\"SS 1\",\n\"price\": 5000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books/5ecd16c602080c21c0e5ee87",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"school",
+								"5ecb08dfd2595416f0dc9975",
+								"books",
+								"5ecd16c602080c21c0e5ee87"
+							]
+						},
+						"description": "This updates a single book belonging to a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books/5ecd16c602080c21c0e5ee87",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/school/5ecb08dfd2595416f0dc9975/books/5ecd16c602080c21c0e5ee87",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"school",
+								"5ecb08dfd2595416f0dc9975",
+								"books",
+								"5ecd16c602080c21c0e5ee87"
+							]
+						},
+						"description": "This deletes a book belonging to a specific school"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Retrieve All The Students Of A Specific School",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								""
+							]
+						},
+						"description": "Use this endpoint to retrieve the students of a specific school."
+					},
+					"response": [
+						{
+							"name": "Retrieve All The Students Of A Specific School",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"students",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "997"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:07:34 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6e-9DgZcJM8Cx0lkaOagf9tjFZi+mc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved all the students\",\n    \"results\": 9,\n    \"data\": [\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef823a\",\n            \"fullname\": \"Musa Ogechi Doyle\",\n            \"email\": \"musageorge@gmail.com\",\n            \"username\": \"musageorge72\",\n            \"phoneNumber\": \"08170217049\",\n            \"dateOfBirth\": \"2006-02-16T23:00:00.000Z\",\n            \"class\": \"SS 3\",\n            \"parent\": \"5ecb08e3d2595416f0dc9988\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 14,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8236\",\n            \"fullname\": \"Amara Chikaodili Mohammed\",\n            \"email\": \"amaraatanda@outlook.com\",\n            \"username\": \"amaraatanda14\",\n            \"phoneNumber\": \"07069816913\",\n            \"dateOfBirth\": \"2006-05-07T23:00:00.000Z\",\n            \"class\": \"Basic 2\",\n            \"parent\": \"5ecb08e3d2595416f0dc9984\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 14,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8237\",\n            \"fullname\": \"Ngozi Chikaodili Edet\",\n            \"email\": \"ngoziobiwuru@gmail.com\",\n            \"username\": \"ngoziobiwuru77\",\n            \"phoneNumber\": \"07069916947\",\n            \"dateOfBirth\": \"2002-10-08T23:00:00.000Z\",\n            \"class\": \"Basic 3\",\n            \"parent\": \"5ecb08e3d2595416f0dc9985\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 17,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8238\",\n            \"fullname\": \"Amake Habbeeb George\",\n            \"email\": \"amakemohammed@aol.com\",\n            \"username\": \"amakemohammed72\",\n            \"phoneNumber\": \"07070016981\",\n            \"dateOfBirth\": \"2003-07-07T23:00:00.000Z\",\n            \"class\": \"Basic 2\",\n            \"parent\": \"5ecb08e3d2595416f0dc9986\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 16,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8239\",\n            \"fullname\": \"Wasiu Ngozi Obi\",\n            \"email\": \"wasiuedet@outlook.com\",\n            \"username\": \"wasiuedet9\",\n            \"phoneNumber\": \"07070117015\",\n            \"dateOfBirth\": \"2008-07-06T23:00:00.000Z\",\n            \"class\": \"SS 2\",\n            \"parent\": \"5ecb08e3d2595416f0dc9987\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 11,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8232\",\n            \"fullname\": \"Amanda Gboyega Babatunde\",\n            \"email\": \"amandababatunde@hotmail.com\",\n            \"username\": \"amandababatunde68\",\n            \"phoneNumber\": \"07069416777\",\n            \"dateOfBirth\": \"2008-10-31T23:00:00.000Z\",\n            \"class\": \"Basic 3\",\n            \"parent\": \"5ecb08e3d2595416f0dc997e\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 11,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8234\",\n            \"fullname\": \"Esther Eketi Atanda\",\n            \"email\": \"esthermonday@hotmail.com\",\n            \"username\": \"esthermonday5\",\n            \"phoneNumber\": \"08169616845\",\n            \"dateOfBirth\": \"2006-08-17T23:00:00.000Z\",\n            \"class\": \"SS 3\",\n            \"parent\": \"5ecb08e3d2595416f0dc9982\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 13,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8235\",\n            \"fullname\": \"Iniobong Aisha Obiwuru\",\n            \"email\": \"iniobongokeke@aol.com\",\n            \"username\": \"iniobongokeke1\",\n            \"phoneNumber\": \"09069716879\",\n            \"dateOfBirth\": \"2003-03-27T23:00:00.000Z\",\n            \"class\": \"Basic 3\",\n            \"parent\": \"5ecb08e3d2595416f0dc9983\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 17,\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Student\",\n            \"category\": \"Student\",\n            \"_id\": \"5ecc155fdd53ff1604ef8233\",\n            \"fullname\": \"Eketi Folake Okeke\",\n            \"email\": \"eketiayantola@gmail.com\",\n            \"username\": \"eketiayantola53\",\n            \"phoneNumber\": \"09069516811\",\n            \"dateOfBirth\": \"2007-04-06T23:00:00.000Z\",\n            \"class\": \"Basic 2\",\n            \"parent\": \"5ecb08e3d2595416f0dc9981\",\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"age\": 13,\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Student Of School",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/5ecc155fdd53ff1604ef823a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecc155fdd53ff1604ef823a"
+							]
+						},
+						"description": "Use this endpoint to retrieve the details of a specific student of a specific school."
+					},
+					"response": [
+						{
+							"name": "Get Student Of School",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/5ecc155fdd53ff1604ef823a",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"students",
+										"5ecc155fdd53ff1604ef823a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "996"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:09:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "430"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ae-vplXo/NjEYunRmDazIsSBd2cEm0\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved the student's details\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Student\",\n        \"category\": \"Student\",\n        \"_id\": \"5ecc155fdd53ff1604ef823a\",\n        \"fullname\": \"Musa Ogechi Doyle\",\n        \"email\": \"musageorge@gmail.com\",\n        \"username\": \"musageorge72\",\n        \"phoneNumber\": \"08170217049\",\n        \"dateOfBirth\": \"2006-02-16T23:00:00.000Z\",\n        \"class\": \"SS 3\",\n        \"parent\": \"5ecb08e3d2595416f0dc9988\",\n        \"school\": \"5ecb08dfd2595416f0dc9977\",\n        \"age\": 14,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Data Of Student Of School",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"musageorge\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/5ecc155fdd53ff1604ef823a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecc155fdd53ff1604ef823a"
+							]
+						},
+						"description": "Use this endpoint to update the details of a school's student."
+					},
+					"response": [
+						{
+							"name": "Update Data Of Student Of School",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"musageorge\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/5ecc155fdd53ff1604ef823a",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"students",
+										"5ecc155fdd53ff1604ef823a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "994"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:12:42 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "422"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a6-HYjvqwwxkUpwGX4U/iq6AXfOo4g\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully updated student's details\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Student\",\n        \"category\": \"Student\",\n        \"_id\": \"5ecc155fdd53ff1604ef823a\",\n        \"fullname\": \"Musa Ogechi Doyle\",\n        \"email\": \"musageorge@gmail.com\",\n        \"username\": \"musageorge\",\n        \"phoneNumber\": \"08170217049\",\n        \"dateOfBirth\": \"2006-02-16T23:00:00.000Z\",\n        \"class\": \"SS 3\",\n        \"parent\": \"5ecb08e3d2595416f0dc9988\",\n        \"school\": \"5ecb08dfd2595416f0dc9977\",\n        \"age\": 14,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Student ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/5ecc155fdd53ff1604ef823a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecc155fdd53ff1604ef823a"
+							]
+						},
+						"description": "Use this endpoint to delete a school's student."
+					},
+					"response": [
+						{
+							"name": "Delete Student ",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/students/5ecc155fdd53ff1604ef823a",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"students",
+										"5ecc155fdd53ff1604ef823a"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "993"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:14:14 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"205-ARE6QZ6ijh0PkQ3L72HD/wvHokk\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "This folder consists of endpoints relating to performing read update and delete operations for students of specific schools.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "Retrieve All Staff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9976",
+								"staff"
+							]
+						},
+						"description": "Use this endpoint to retrieve all the staff information of a specific school."
+					},
+					"response": [
+						{
+							"name": "Retrieve All Staff",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9976",
+										"staff"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "992"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:15:16 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b30-t6nyWXjpDWZ5aNG71UlgPlHR9gw\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved all the staff officials\",\n    \"results\": 9,\n    \"data\": [\n        {\n            \"role\": \"Principal\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Accounting\",\n                \"Biology\"\n            ],\n            \"classes\": [\n                \"Basic 1\",\n                \"SS 2\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e2\",\n            \"fullname\": \"Amake Yemi Solarin\",\n            \"email\": \"amakesolarin@outlook.com\",\n            \"username\": \"amakesolarin63\",\n            \"phoneNumber\": \"08170417117\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Vice-Principal\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Geography\",\n                \"Geography\"\n            ],\n            \"classes\": [\n                \"SS 3\",\n                \"Basic 2\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e3\",\n            \"fullname\": \"Azeez Moses Obasola\",\n            \"email\": \"azeezobasola@outlook.com\",\n            \"username\": \"azeezobasola27\",\n            \"phoneNumber\": \"07070517151\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Bursar\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Mathematics\",\n                \"Accounting\"\n            ],\n            \"classes\": [\n                \"Basic 3\",\n                \"Basic 3\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e5\",\n            \"fullname\": \"Bunmi Mary Obasola\",\n            \"email\": \"bunmiobasola@gmail.com\",\n            \"username\": \"bunmiobasola21\",\n            \"phoneNumber\": \"09070717219\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Form-Teacher\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Basic science\",\n                \"Geography\"\n            ],\n            \"classes\": [\n                \"SS 3\",\n                \"SS 3\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e6\",\n            \"fullname\": \"Mary Chioma Lawnson\",\n            \"email\": \"marylawnson@aol.com\",\n            \"username\": \"marylawnson50\",\n            \"phoneNumber\": \"09070817253\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Form-Teacher\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Accounting\",\n                \"Biology\"\n            ],\n            \"classes\": [\n                \"SS 3\",\n                \"SS 1\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e7\",\n            \"fullname\": \"Sunday Chiamaka Eze\",\n            \"email\": \"sundayeze@hotmail.com\",\n            \"username\": \"sundayeze10\",\n            \"phoneNumber\": \"08170917287\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Form-Teacher\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Basic science\",\n                \"Mathematics\"\n            ],\n            \"classes\": [\n                \"Basic 3\",\n                \"SS 3\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e8\",\n            \"fullname\": \"Eketi Habbeeb Abdul\",\n            \"email\": \"eketiabdul@gmail.com\",\n            \"username\": \"eketiabdul38\",\n            \"phoneNumber\": \"07071017321\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Teacher\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Hausa Language\",\n                \"Hausa Language\"\n            ],\n            \"classes\": [\n                \"Basic 3\",\n                \"Basic 1\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81e9\",\n            \"fullname\": \"Folake Funsho Awolowo\",\n            \"email\": \"folakeawolowo@gmail.com\",\n            \"username\": \"folakeawolowo3\",\n            \"phoneNumber\": \"07071117355\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Teacher\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Mathematics\",\n                \"Basic science\"\n            ],\n            \"classes\": [\n                \"Basic 2\",\n                \"Basic 3\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81ea\",\n            \"fullname\": \"John Habbeeb Olanrewaju\",\n            \"email\": \"johnolanrewaju@aol.com\",\n            \"username\": \"johnolanrewaju68\",\n            \"phoneNumber\": \"09071217389\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Teacher\",\n            \"category\": \"Staff\",\n            \"subjects\": [\n                \"Physics\",\n                \"Accounting\"\n            ],\n            \"classes\": [\n                \"SS 3\",\n                \"SS 1\"\n            ],\n            \"_id\": \"5ecc14f1dd53ff1604ef81eb\",\n            \"fullname\": \"Musa Emeka Doyle\",\n            \"email\": \"musadoyle@aol.com\",\n            \"username\": \"musadoyle77\",\n            \"phoneNumber\": \"07071317423\",\n            \"school\": \"5ecb08dfd2595416f0dc9976\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve A Single Staff Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff/5ecc14f1dd53ff1604ef81e2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9976",
+								"staff",
+								"5ecc14f1dd53ff1604ef81e2"
+							]
+						},
+						"description": "Use this endpoint to retrieve the details of a single staff official for a school."
+					},
+					"response": [
+						{
+							"name": "Retrieve A Single Staff Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff/5ecc14f1dd53ff1604ef81e2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9976",
+										"staff",
+										"5ecc14f1dd53ff1604ef81e2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "991"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:15:58 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-Nyjzl83/wGcJwpcyPkMIC/3vRmQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved the official's details\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Principal\",\n        \"category\": \"Staff\",\n        \"subjects\": [\n            \"Accounting\",\n            \"Biology\"\n        ],\n        \"classes\": [\n            \"Basic 1\",\n            \"SS 2\"\n        ],\n        \"_id\": \"5ecc14f1dd53ff1604ef81e2\",\n        \"fullname\": \"Amake Yemi Solarin\",\n        \"email\": \"amakesolarin@outlook.com\",\n        \"username\": \"amakesolarin63\",\n        \"phoneNumber\": \"08170417117\",\n        \"school\": \"5ecb08dfd2595416f0dc9976\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Staff Information",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"subjects\": [\n\t\t\"Mathematics\",\n\t\t\"Hausa Language\",\n\t\t\"English Language\"\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff/5ecc14f1dd53ff1604ef81e2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9976",
+								"staff",
+								"5ecc14f1dd53ff1604ef81e2"
+							]
+						},
+						"description": "Use this endpoint to update the staff details of a specific school."
+					},
+					"response": [
+						{
+							"name": "Update Staff Information",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"subjects\": [\n\t\t\"Mathematics\",\n\t\t\"Hausa Language\",\n\t\t\"English Language\"\n\t\t]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff/5ecc14f1dd53ff1604ef81e2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9976",
+										"staff",
+										"5ecc14f1dd53ff1604ef81e2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "990"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:16:47 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "422"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a6-HGz3oFATYhWgwacZCz6he8TYPaU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully updated staff information\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Principal\",\n        \"category\": \"Staff\",\n        \"subjects\": [\n            \"Mathematics\",\n            \"Hausa Language\",\n            \"English Language\"\n        ],\n        \"classes\": [\n            \"Basic 1\",\n            \"SS 2\"\n        ],\n        \"_id\": \"5ecc14f1dd53ff1604ef81e2\",\n        \"fullname\": \"Amake Yemi Solarin\",\n        \"email\": \"amakesolarin@outlook.com\",\n        \"username\": \"amakesolarin63\",\n        \"phoneNumber\": \"08170417117\",\n        \"school\": \"5ecb08dfd2595416f0dc9976\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete School Staff",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff/5ecc14f1dd53ff1604ef81e2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9976",
+								"staff",
+								"5ecc14f1dd53ff1604ef81e2"
+							]
+						},
+						"description": "Use this endpoint to delete the staff of a school."
+					},
+					"response": [
+						{
+							"name": "Delete School Staff",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9976/staff/5ecc14f1dd53ff1604ef81e2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9976",
+										"staff",
+										"5ecc14f1dd53ff1604ef81e2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "989"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:17:44 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ff-X8qRjN/s1vYZ9dzFGePg4HgPpSg\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "This folder consits of a series of endpoints, which allow's a school's administrator to perform read update and delete operations on his staff information.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Parents",
+			"item": [
+				{
+					"name": "Get All The Parents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/parents",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"parents"
+							]
+						},
+						"description": "Use this endpoint to retrieve the information of parents that have children who are students of a specific school."
+					},
+					"response": [
+						{
+							"name": "Get All The Parents",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/parents",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"parents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "988"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:19:00 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"690-p0pclSMnvOwrRhXcr+++lfNuiig\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved all parents\",\n    \"results\": 8,\n    \"data\": [\n        {\n            \"role\": \"Parent\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9984\",\n            \"fullname\": \"Jumoke Kevin Mohammed\",\n            \"email\": \"jumokemohammed@aol.com\",\n            \"username\": \"jumokemohammed\",\n            \"phoneNumber\": \"07070016981\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Guardian\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9985\",\n            \"fullname\": \"Yemi Echezona Edet\",\n            \"email\": \"yemiedet@aol.com\",\n            \"username\": \"yemiedet\",\n            \"phoneNumber\": \"07070117015\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Parent\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9986\",\n            \"fullname\": \"Esther Teslim George\",\n            \"email\": \"esthergeorge@aol.com\",\n            \"username\": \"esthergeorge\",\n            \"phoneNumber\": \"08170217049\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Parent\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9987\",\n            \"fullname\": \"Chinyere Toyin Obi\",\n            \"email\": \"chinyereobi@aol.com\",\n            \"username\": \"chinyereobi\",\n            \"phoneNumber\": \"08170317083\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Parent\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc997e\",\n            \"fullname\": \"Chinyere Teslim Babatunde\",\n            \"email\": \"chinyerebabatunde@gmail.com\",\n            \"username\": \"chinyerebabatunde\",\n            \"phoneNumber\": \"07069416777\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Parent\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9982\",\n            \"fullname\": \"Musa Grace Atanda\",\n            \"email\": \"musaatanda@aol.com\",\n            \"username\": \"musaatanda\",\n            \"phoneNumber\": \"09069816913\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Parent\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9983\",\n            \"fullname\": \"Amake Aisha Obiwuru\",\n            \"email\": \"amakeobiwuru@hotmail.com\",\n            \"username\": \"amakeobiwuru\",\n            \"phoneNumber\": \"08169916947\",\n            \"__v\": 0\n        },\n        {\n            \"role\": \"Guardian\",\n            \"category\": \"Parent\",\n            \"_id\": \"5ecb08e3d2595416f0dc9981\",\n            \"fullname\": \"Ibukun Eketi Okeke\",\n            \"email\": \"ibukunokeke@hotmail.com\",\n            \"username\": \"ibukunokeke\",\n            \"phoneNumber\": \"07069716879\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve Parent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/parents/5ecb08e3d2595416f0dc9984",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"parents",
+								"5ecb08e3d2595416f0dc9984"
+							]
+						},
+						"description": "Use this endpoint to retrieve information about a parent."
+					},
+					"response": [
+						{
+							"name": "Retrieve Parent",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/parents/5ecb08e3d2595416f0dc9984",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"parents",
+										"5ecb08e3d2595416f0dc9984"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "987"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:19:52 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-tYTfotVQrjjrFVo+LWb6Cf6DqMk\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved the requested information\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Parent\",\n        \"category\": \"Parent\",\n        \"_id\": \"5ecb08e3d2595416f0dc9984\",\n        \"fullname\": \"Jumoke Kevin Mohammed\",\n        \"email\": \"jumokemohammed@aol.com\",\n        \"username\": \"jumokemohammed\",\n        \"phoneNumber\": \"07070016981\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Parent",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fullname\": \"Jumoke Kevin\",\n\t\"username\":\"jumokekevin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/parents/5ecb08e3d2595416f0dc9984",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"parents",
+								"5ecb08e3d2595416f0dc9984"
+							]
+						},
+						"description": "Use this endpoint to update a parent's details."
+					},
+					"response": [
+						{
+							"name": "Update Parent",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"fullname\": \"Jumoke Kevin\",\n\t\"username\":\"jumokekevin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/parents/5ecb08e3d2595416f0dc9984",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"parents",
+										"5ecb08e3d2595416f0dc9984"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "986"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:22:50 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "263"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"107-6PTnG9vM4lI1mkuZF6kOczhSh2I\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully updated\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Parent\",\n        \"category\": \"Parent\",\n        \"_id\": \"5ecb08e3d2595416f0dc9984\",\n        \"fullname\": \"Jumoke Kevin\",\n        \"email\": \"jumokemohammed@aol.com\",\n        \"username\": \"jumokekevin\",\n        \"phoneNumber\": \"07070016981\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Parent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/parents/5ecb08e3d2595416f0dc9984",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"parents",
+								"5ecb08e3d2595416f0dc9984"
+							]
+						},
+						"description": "Use this endpoint to delete a parent's details from the universal school system."
+					},
+					"response": [
+						{
+							"name": "Delete Parent",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/parents/5ecb08e3d2595416f0dc9984",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"parents",
+										"5ecb08e3d2595416f0dc9984"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "985"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 May 2020 11:24:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590493047"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15f-iemVZGzynH6Nd1/F1+Tuk4Q/6rQ\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "This folder contains a series of endpoints relating to performing read update and delete operations on parents information.",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

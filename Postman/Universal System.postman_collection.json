@@ -1,0 +1,978 @@
+{
+	"info": {
+		"_postman_id": "68b4d31d-bb49-4562-a715-6682f8718eef",
+		"name": "Universal System",
+		"description": "This collection is the third in the series of collections relating to the Universal School System Project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Me",
+			"item": [
+				{
+					"name": "Get My Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me"
+							]
+						},
+						"description": "This endpoint can be used by logged in users to retrieve only their own information."
+					},
+					"response": [
+						{
+							"name": "Get My Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/me",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "996"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 May 2020 11:35:06 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590668892"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b9-c9EyV1XFKEs/EJ44U9XJwyVpGXU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved your details\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Student\",\n        \"category\": \"Student\",\n        \"_id\": \"5ecf95f436601f194c3ede77\",\n        \"fullname\": \"Lawrence Yemi Okeke\",\n        \"email\": \"lawrenceayantola@gmail.com\",\n        \"username\": \"lawrenceayantola84\",\n        \"phoneNumber\": \"+2349074018341\",\n        \"dateOfBirth\": \"2003-09-22T23:00:00.000Z\",\n        \"class\": \"Basic 2\",\n        \"parent\": \"5ecb08e3d2595416f0dc9981\",\n        \"school\": \"5ecb08dfd2595416f0dc9978\",\n        \"age\": 16,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"{{ADMINPASSWORD}}\",\n    \"schoolName\": \"Orient Academy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me"
+							]
+						},
+						"description": "This endpoint can be used by logged in users to update only their own information."
+					},
+					"response": [
+						{
+							"name": "Update Me",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"fullname\": \"Chinyere Teslim Babatunde\",\n    \"email\": \"chinyerebabatunde@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/me",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "996"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 28 May 2020 11:47:18 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590669691"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-MK5Vlfkxtkq233nNuPqe1qNfGWc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully updated your details\",\n    \"results\": 1,\n    \"data\": {\n        \"role\": \"Parent\",\n        \"category\": \"Parent\",\n        \"_id\": \"5ecb08e3d2595416f0dc997e\",\n        \"fullname\": \"Chinyere Teslim Babatunde\",\n        \"email\": \"chinyerebabatunde@gmail.com\",\n        \"username\": \"chinyerebabatunde\",\n        \"phoneNumber\": \"+2347069416777\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me"
+							]
+						},
+						"description": "This endpoint should be used by logged in users to delete their own information."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Verification Code.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/verification_code",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								"verification_code"
+							]
+						},
+						"description": "A user should use this endpoint to verify their account's phone number after signing up."
+					},
+					"response": [
+						{
+							"name": "Get Verification Code.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/me/verification_code",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										"verification_code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 May 2020 19:12:09 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590869476"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-Z0rVVCyD+5g5fEs5tBG4QGt28Cs\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Your verification code has been sent to your mobile phone as a text message\",\n    \"verificationCode\": \"e33b8d\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify My Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"verificationCode\": \"e33b8d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/verify_my_account",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								"verify_my_account"
+							]
+						},
+						"description": "A logged in user who has recieved his or her verification code should use this endpoint to verify their account."
+					},
+					"response": [
+						{
+							"name": "Verify My Account",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"resetCode\": \"1bf56b\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/verify_my_account",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"verify_my_account"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 May 2020 18:53:36 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590868333"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-FJ9HxgZ6GHNmxxNKvyplPXfQpTA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Your account has been successfully verified.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder consists of endpoints where logged in users can see, update and delete only their own details.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n            \"subject\": \"Biology\",\r\n            \"class\": \"SS2\",\r\n            \"category\": \"Classwork\",\r\n            \"question\": \"Proteins in acid solution undergo\",\r\n            \"options\": {\r\n                \"a\": \"Polymerization\",\r\n                \"b\": \"Substitution\",\r\n                \"c\": \"Fermentation\",\r\n                \"d\": \"Hydrolysis\"\r\n            },\r\n            \"answer\": \"d\",\r\n            \"points\": 3\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"questions"
+							]
+						},
+						"description": "Creates a question for a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions?class=SS3&category=Quiz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions?class=SS3&category=Quiz",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"questions"
+							],
+							"query": [
+								{
+									"key": "class",
+									"value": "SS3"
+								},
+								{
+									"key": "category",
+									"value": "Quiz"
+								}
+							]
+						},
+						"description": "This route returns all the questions of a specific schook"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions/5ecf7b9a525ab2125c2b96fc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions/5ecf7b9a525ab2125c2b96fc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"questions",
+								"5ecf7b9a525ab2125c2b96fc"
+							]
+						},
+						"description": "This returns a single question of a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions/5ecf7b9a525ab2125c2b96fc",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n\r\n            \"subject\": \"Physics\",\r\n            \"class\": \"SS1\",\r\n            \"category\": \"Exam\",\r\n            \"options\": {\r\n                \"c\": \"Atoms are the tiniest known elements\",\r\n                \"d\": \"All atoms are of the same weight\"\r\n\r\n            },\r\n            \"answer\": \"a\",\r\n            \"points\": 2\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions/5ecf7b9a525ab2125c2b96fc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"questions",
+								"5ecf7b9a525ab2125c2b96fc"
+							]
+						},
+						"description": "Updates a particular question of a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions/5ecf7b9a525ab2125c2b9712",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/questions/5ecf7b9a525ab2125c2b9712",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"questions",
+								"5ecf7b9a525ab2125c2b9712"
+							]
+						},
+						"description": "Deletes a single question of a specific school"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Assessments",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n            \"subject\": \"Biology\",\r\n            \"title\": \"First Term Examination\",\r\n            \"class\": \"SS2\",\r\n            \"category\": \"Exam\",\r\n            \"term\": \"1\",\r\n            \"year\": \"2006\",\r\n            \"percentage\": \"45\",\r\n            \"school\": \"5ecb08dfd2595416f0dc9975\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"assessments"
+							]
+						},
+						"description": "Creates an assessment for a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"assessments"
+							]
+						},
+						"description": "Gets all assessments of a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments/5ecff0e920381a1ed88108a9",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments/5ecff0e920381a1ed88108a9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"assessments",
+								"5ecff0e920381a1ed88108a9"
+							]
+						},
+						"description": "Gets a specific assessment of a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments/5ecff0e920381a1ed88108a9",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"questions\": [\n        \"5ecf7b9a525ab2125c2b9768\"\n        ],\n        \"category\": \"Exam\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments/5ecff0e920381a1ed88108a9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"assessments",
+								"5ecff0e920381a1ed88108a9"
+							]
+						},
+						"description": "Updates a specific assessment of a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments/5ed0357a2d3e751f94b70db3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9975/assessments/5ed0357a2d3e751f94b70db3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9975",
+								"assessments",
+								"5ed0357a2d3e751f94b70db3"
+							]
+						},
+						"description": "Dletes an assessmet or a question within an assessment"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Classrom",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"title\":\"Basic1A\",\n      \"formTeacher\":\"5ecf98d0dca4071ddc002002\",\n      \"prefect\":\"5ecf9935dca4071ddc002088\",\n      \"term\": 1,\n      \"students\": [\n        \"5ecf9935dca4071ddc002088\",\n        \"5ecf9935dca4071ddc002089\",\n        \"5ecf9935dca4071ddc00208b\",\n        \"5ecf9935dca4071ddc00208e\",\n        \"5ecf9935dca4071ddc00208d\"\n        ],\n        \"numOfBoys\": 12,\n        \"numOfGirls\": 23,\n        \"year\": \"2020\",\n        \"population\": 35,\n        \"school\": \"5ecb08dfd2595416f0dc9977\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes"
+							]
+						},
+						"description": "Creates a class for a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								""
+							]
+						},
+						"description": "Retrieves classes of a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed15c9ef6990215b40635ff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed2330cfc427e1f740cfba2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed2330cfc427e1f740cfba2"
+							]
+						},
+						"description": "Retrieves a single class of a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed15c9ef6990215b40635ff",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t    \"students\": [\n            \"5ecf9935dca4071ddc00208c\",\n            \"5ecf9935dca4071ddc00208f\"\n        ],\n        \"title\": \"Basic3A\",\n        \"term\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed15c9ef6990215b40635ff",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed15c9ef6990215b40635ff"
+							]
+						},
+						"description": "Updates a specific class of a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed163e969bd7c217856d828",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed163e969bd7c217856d828",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed163e969bd7c217856d828"
+							]
+						},
+						"description": "Deletes a specific class of a school"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

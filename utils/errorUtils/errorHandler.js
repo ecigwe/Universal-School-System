@@ -3,7 +3,8 @@ function errorHandler(status, message) {
   err.statusCode = status;
   err.status = 'error';
   err.message = message;
+  err.isOperational = true;
   throw err;
 }
 
-module.exports =  errorHandler;
+module.exports = errorHandler;

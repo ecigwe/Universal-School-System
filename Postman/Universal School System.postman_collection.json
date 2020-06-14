@@ -1,0 +1,1160 @@
+{
+	"info": {
+		"_postman_id": "fb1db5e1-352a-4bd7-a89f-428152e0d624",
+		"name": "Universal School System",
+		"description": "This API is specifically designed for powering the universal school mobile application. The application ensures that schools can hold lectures and carry on other essential school activities in a virtual environment.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Miscellanous",
+			"item": [
+				{
+					"name": "Root Endpoint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}",
+							"host": [
+								"{{URL}}"
+							]
+						},
+						"description": "This endpoint responds with a successful status message to the client, stating that the API is running smoothly."
+					},
+					"response": [
+						{
+							"name": "Root Endpoint",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-BTxZhBFoirugMY273SvhOKkhKRs\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 May 2020 05:47:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"The Universal School System API Has Started Successfully And Is Running Smoothly.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "An Undefined Route",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/any-endpoint-that-does-not-exist-on-the-app",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"any-endpoint-that-does-not-exist-on-the-app"
+							]
+						},
+						"description": "This request shows how the server responds, when, a request is made to a route that is not defined on the application."
+					},
+					"response": [
+						{
+							"name": "An Undefined Route",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/any-endpoint-that-does-not-exist-on-the-app",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"any-endpoint-that-does-not-exist-on-the-app"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "249"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f9-azhAMV2oj7oTdS2Ekb9kT/7XDVk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 May 2020 01:38:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Cannot find /any-endpoint-that-does-not-exist-on-the-app On This Server\",\n    \"err\": {\n        \"statusCode\": 404,\n        \"status\": \"error\",\n        \"message\": \"Cannot find /any-endpoint-that-does-not-exist-on-the-app On This Server\",\n        \"isOperational\": true\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder consists of endpoints whose responses to clients do not contain critical information or resources.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "Register Student",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bb61f31b-bf15-4771-9f6b-4f4faa24e3d0",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullname\": \"Ama Akwukwuma Junior\",\n    \"email\": \"amaakwukwuma@aol.com\",\n    \"username\": \"amaakwukwuma90\",\n    \"phoneNumber\": \"8123918306\",\n    \"role\": \"Student\",\n    \"category\": \"Student\",\n    \"dateOfBirth\": \"10 28 05\",\n    \"schoolAddress\": \"30 Ezekiel Street, Satelite Town, Rivers\",\n    \"schoolName\": \"Hopebay College\",\n    \"parentPhoneNumber\": \"7069416777\",\n    \"class\": \"SS 3\",\n    \"activeStudent\": true,\n    \"password\": \"qwerty12345\",\n    \"confirmPassword\": \"qwerty12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/student/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"student",
+										"register"
+									]
+								},
+								"description": "Use this endpoint to register as a student, if your school is already registered on the app."
+							},
+							"response": []
+						},
+						{
+							"name": "Student Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4e0cd668-f862-4aad-ad97-78a1425c9e0f",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"Ephraim32\",\n\t\"password\": \"{{PASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/student/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"student",
+										"login"
+									]
+								},
+								"description": "Use this endpoint for logging in if you are a student. "
+							},
+							"response": []
+						}
+					],
+					"description": "This series of endpoints are to be used for anything relating to authentication for students.",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Parent",
+					"item": [
+						{
+							"name": "Register Parent",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5a35980c-334e-4f39-bca0-f63819e3f3a5",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"fullname\": \"Patience Dibiagwu\",\n\t\"email\": \"patiencedibiagwu23@gmail.com\",\n\t\"username\": \"Patience24\",\n\t\"phoneNumber\": \"9052943471\",\n\t\"password\": \"{{PASSWORD}}\",\n\t\"confirmPassword\": \"{{PASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/parent/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"parent",
+										"register"
+									]
+								},
+								"description": "Use this endpoint to sign up as a parent if your child or any of your children are to be registered under a school on our platform."
+							},
+							"response": []
+						},
+						{
+							"name": "Parent Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "de8515a6-fd95-47db-8841-8fc066240252",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"Patience24\",\n\t\"password\": \"{{PASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/parent/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"parent",
+										"login"
+									]
+								},
+								"description": "Use this endpoint to login as a parent if you already have an account."
+							},
+							"response": []
+						}
+					],
+					"description": "This series of endpoints are to be used for anything related to authenticating parents.",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Staff",
+					"item": [
+						{
+							"name": "Register School Staff",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "296f0abe-a283-47c1-8c6e-e7a0aad548ed",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"fullname\": \"Pan Peter\",\n\t\"email\": \"panpeter@gmail.com\",\n\t\"username\": \"Pan10\",\n\t\"phoneNumber\": \"9029202271\",\n\t\"schoolName\": \"Hopebay College\",\n\t\"schoolAddress\": \"30 Ezekiel Street, Satelite Town, Rivers\",\n\t\"subjects\": [\"History\", \"Government\"],\n\t\"classes\": [\"SS1\", \"SS2\", \"SS3\"],\n\t\"password\": \"{{PASSWORD}}\",\n\t\"confirmPassword\": \"{{PASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/staff/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"staff",
+										"register"
+									]
+								},
+								"description": "Use this endpoint to register as a staff member of a school, if your school is registered on the application."
+							},
+							"response": []
+						},
+						{
+							"name": "Staff Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c0279ad8-783c-4c1a-8cd7-fc6af659ef47",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"Pan10\",\n\t\"password\": \"{{PASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/staff/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"staff",
+										"login"
+									]
+								},
+								"description": "Use this endpoint to login as a staff member of a school."
+							},
+							"response": []
+						}
+					],
+					"description": "This folder consists of endpoints relating to authenticating staff members of schools.",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Register An Administrator",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0bddaff7-1555-4e9a-9bd5-c92f7b752f7e",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"fullname\": \"Emmanuel Igwe\",\n\t\"email\": \"emmanuel.igwe38@gmail.com\",\n\t\"username\": \"Igwe38\",\n\t\"phoneNumber\": \"9024058821\",\n\t\"role\": \"designer\",\n\t\"password\": \"{{PASSWORD}}\",\n\t\"confirmPassword\": \"{{PASSWORD}}\",\n\t\"adminCode\": \"{{ADMIN_CODE}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/admin/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"register"
+									]
+								},
+								"description": "Use this endpoint for registering anyone that is critical to the functioning of the app."
+							},
+							"response": []
+						},
+						{
+							"name": "Login Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "71589c0a-f1e3-46e0-b4ab-b0695b79fe0a",
+										"exec": [
+											"pm.environment.set(\"jwt\", pm.response.json().token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"Igwe38\",\n\t\"password\": \"{{PASSWORD}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/admin/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"login"
+									]
+								},
+								"description": "Use this endpoint for logging in if you are an administrator."
+							},
+							"response": []
+						}
+					],
+					"description": "This endpoint concerns all authentication activities for the application's administrators.",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Logout any type of user from the application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9f68ff24-14f7-4c94-8b2d-2f67b3d10c46",
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						},
+						"description": "Use this endpoint for logging out users"
+					},
+					"response": [
+						{
+							"name": "Logout any type of user from the application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/logout",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=logYouOut; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-z0IzHC8iVur6/BuVMuzyWJag5ns\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 May 2020 13:57:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"successfully logged out\",\n    \"token\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"currentPassword\": \"{{CURRENTPASSWORD}}\",\n\t\"newPassword\": \"{{NEWPASSWORD}}\",\n\t\"confirmNewPassword\": \"{{NEWPASSWORD}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/update_my_password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"update_my_password"
+							]
+						},
+						"description": "Any logged in user can have their password updated through this endpoint."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder is concerned with any operation related to authentication for parents, students, staff, and admin.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Schools",
+			"item": [
+				{
+					"name": "Register a new school",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"isSubscribed\": false,\r\n            \"admin\": \"funshoikokwu90\",\r\n            \"name\": \"Hopebay College\",\r\n            \"address\": \"30 Ezekiel Street, Satelite Town, Rivers\",\r\n            \"population\": 4407,\r\n            \"email\": \"hopebay@yahoo.com\",\r\n            \"phoneNumber\": \"+2349032745059\",\r\n            \"imageUrl\": \"https://example.com/ex.jpg\",\r\n            \"__v\": 0\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								""
+							]
+						},
+						"description": "Creates a new school and returns the created School.\r\nNote that in the admin field, the username of the admin(the school's principal officer) should be indicated"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Registered Schools",
+					"protocolProfileBehavior": {
+						"followOriginalHttpMethod": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools"
+							]
+						},
+						"description": "This route returns all schools in the database."
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve The Details Of A Single School",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecbc68d3fc1150017b0b0b8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecbc68d3fc1150017b0b0b8"
+							]
+						},
+						"description": "Takes an Id parameter and Returns a single school."
+					},
+					"response": []
+				},
+				{
+					"name": "Update A Specific School",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \r\n\r\n      \"city\": \"Agege\",\r\n      \"state\": \"Lagos\",\r\n      \"population\": 4599,\r\n      \"email\": \"ms@yahoomail.com\",\r\n      \"phoneNumber\": \"+2348011111111\",\r\n      \"imageUrl\": \"https://example.com/ex.jpg\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecbc68d3fc1150017b0b0b8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecbc68d3fc1150017b0b0b8"
+							]
+						},
+						"description": "Updates the record of a specific school. Returns updated record"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Specific School",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecbc68d3fc1150017b0b0b8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecbc68d3fc1150017b0b0b8"
+							]
+						},
+						"description": "Deletes a registered school from the database of the universal school system."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains all endpoints relating to registering, retrieving, updating, and deleting of school information.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Administrators",
+					"item": [
+						{
+							"name": "Retrieve all the administrators of the company.",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/admins",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"admins"
+									]
+								},
+								"description": "Use this endpoint to see all the current administrators of the universal school project. "
+							},
+							"response": [
+								{
+									"name": "Retrieve all the administrators of the company.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/v1/users/admins",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users",
+												"admins"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "1000"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "999"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 May 2020 00:19:17 GMT"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "1590283143"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "562"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"232-Lkd5RfmHAyH4nOkP8TF8mBpTO3k\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved all the administrators\",\n    \"results\": 2,\n    \"data\": [\n        {\n            \"isAnAdmin\": true,\n            \"role\": \"backend-developer\",\n            \"category\": \"Admin\",\n            \"_id\": \"5ec92d57d94fa51314fddfbd\",\n            \"fullname\": \"Diai Immanuel Onyeka\",\n            \"email\": \"immanueldiai@gmail.com\",\n            \"username\": \"Immanuel5015\",\n            \"phoneNumber\": \"09064058820\",\n            \"__v\": 0\n        },\n        {\n            \"isAnAdmin\": true,\n            \"role\": \"backend-developer\",\n            \"category\": \"Admin\",\n            \"_id\": \"5ec92d57d94fa51314fddfbc\",\n            \"fullname\": \"Abuchi Kingsley Ndinigwe\",\n            \"email\": \"abuchikings@hotmail.com\",\n            \"username\": \"abuchikingsley76\",\n            \"phoneNumber\": \"08062158380\",\n            \"__v\": 0\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "See An Administrator",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/admins/5ecb9ba7e608111cf05a5424",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"admins",
+										"5ecb9ba7e608111cf05a5424"
+									]
+								},
+								"description": "Use this endpoint to see the details of a specific administrator."
+							},
+							"response": []
+						},
+						{
+							"name": "Update Administrator's Information",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"Immanuel5017\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/admins/5ecb9ba7e608111cf05a5424",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"admins",
+										"5ecb9ba7e608111cf05a5424"
+									]
+								},
+								"description": "Use this endpoint to update the details of an administrator of the company."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Administrator",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/admins/5ecb9ba7e608111cf05a5424",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"admins",
+										"5ecb9ba7e608111cf05a5424"
+									]
+								},
+								"description": "Use this endpoint to delete all the details of an administrator."
+							},
+							"response": []
+						}
+					],
+					"description": "This folder contains all endpoints relating to the performing of RUD operations for the administrators.",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fa4b34a7-f49e-4bb8-b358-72bc91d7b9f4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "56a021e0-196f-4fc0-932e-8b438b58c874",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "This folder contains endpoints relating to performing RUD operations on Students, Parents, Staff and Administrators.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "32e9b5d5-f2ce-4b51-bec6-24f475653637",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "73935c17-b510-4461-88ca-3a812b0069d7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7f526952-24e5-45b4-ae4c-f57ef5a38a36",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bda98fd9-f4bc-4162-85d2-258cb7d02270",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

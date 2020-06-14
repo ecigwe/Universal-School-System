@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "82be8272-9596-48b9-8bc3-74178a3bffc9",
+		"name": "Timetables",
+		"description": "This collection consists of folders relating to study timetables, lecture timetables, and teaching timetables.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Study Timetable",
+			"item": [
+				{
+					"name": "Create Personal Study Timetable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"monday\": [\n\t\t{\"subject\": \"Math\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"English\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"tuesday\": [\n\t\t{\"subject\": \"Physics\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Chemistry\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"wednesday\": [\n\t\t{\"subject\": \"Biology\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Agric\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"thursday\": [\n\t\t{\"subject\": \"CRS\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Civic\", \"numOfStudyHours\": \"1 hour\", \"start\": \"6:30pm\", \"stop\": \"7:30pm\"}\n\t\t],\n\t\"friday\": [\n\t\t{\"subject\": \"Further Maths\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Government\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t],\n\t\"saturday\": [\n\t\t{\"subject\": \"Literature\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"English\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"sunday\": [\n\t\t{\"subject\": \"Math\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Chemistry\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/study_timetable",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								"study_timetable"
+							]
+						},
+						"description": "A student or a staff official can use this endpoint to create a personal study timetable for themselves."
+					},
+					"response": [
+						{
+							"name": "Create Personal Study Timetable",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"monday\": [\n\t\t{\"subject\": \"Math\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"English\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"tuesday\": [\n\t\t{\"subject\": \"Physics\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Chemistry\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"wednesday\": [\n\t\t{\"subject\": \"Biology\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Agric\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"thursday\": [\n\t\t{\"subject\": \"CRS\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Civic\", \"numOfStudyHours\": \"1 hour\", \"start\": \"6:30pm\", \"stop\": \"7:30pm\"}\n\t\t],\n\t\"friday\": [\n\t\t{\"subject\": \"Further Maths\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Government\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t],\n\t\"saturday\": [\n\t\t{\"subject\": \"Literature\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"English\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t],\n\t\"sunday\": [\n\t\t{\"subject\": \"Math\", \"numOfStudyHours\": \"1 hour\", \"start\": \"5pm\", \"stop\": \"6pm\"},\n\t\t{\"subject\": \"Chemistry\", \"numOfStudyHours\": \"1 hour\", \"start\": \"7pm\", \"stop\": \"8pm\"}\n\t\t]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/users/me/study_timetables",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										"study_timetables"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 May 2020 13:33:56 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590935609"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"732-eI9S3MkkVzIDTR86Z9lmCA5nyzM\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Your timetable has been successfully created\",\n    \"results\": 1,\n    \"data\": {\n        \"authorCategory\": \"Student\",\n        \"category\": \"Study\",\n        \"_id\": \"5ed3b246538ee0184cf8d6fd\",\n        \"monday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d6fe\",\n                \"subject\": \"Math\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d6ff\",\n                \"subject\": \"English\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"tuesday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d700\",\n                \"subject\": \"Physics\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d701\",\n                \"subject\": \"Chemistry\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"wednesday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d702\",\n                \"subject\": \"Biology\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d703\",\n                \"subject\": \"Agric\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"thursday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d704\",\n                \"subject\": \"CRS\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d705\",\n                \"subject\": \"Civic\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"6:30pm\",\n                \"stop\": \"7:30pm\"\n            }\n        ],\n        \"friday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d706\",\n                \"subject\": \"Further Maths\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d707\",\n                \"subject\": \"Government\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"saturday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d708\",\n                \"subject\": \"Literature\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d709\",\n                \"subject\": \"English\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"sunday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d70a\",\n                \"subject\": \"Math\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d70b\",\n                \"subject\": \"Chemistry\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"authorUsername\": \"lawrenceayantola84\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch My Study Timetable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/study_timetable",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								"study_timetable"
+							]
+						},
+						"description": "Students and staff can use this endpoint to retrieve their personal study timetables."
+					},
+					"response": []
+				},
+				{
+					"name": "Update My Timetable",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tuesday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d6fe\",\n                \"subject\": \"Math\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d6ff\",\n                \"subject\": \"English\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ],\n        \"monday\": [\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d700\",\n                \"subject\": \"Physics\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"5pm\",\n                \"stop\": \"6pm\"\n            },\n            {\n                \"_id\": \"5ed3b246538ee0184cf8d701\",\n                \"subject\": \"Chemistry\",\n                \"numOfStudyHours\": \"1 hour\",\n                \"start\": \"7pm\",\n                \"stop\": \"8pm\"\n            }\n        ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/study_timetable",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								"study_timetable"
+							]
+						},
+						"description": "This endpoint can be used by students and staff to update their personal timetable."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete My Personal Timetable",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/study_timetables",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								"study_timetables"
+							]
+						},
+						"description": "A logged in student or a staff can use this endpoint to delete their personal timetable."
+					},
+					"response": [
+						{
+							"name": "Delete My Personal Timetable",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/users/me/study_timetables",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										"study_timetables"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 May 2020 14:24:57 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1590938639"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"724-NS9ZtCnX9l48IzJYkw/y9PY9744\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "This folder consits of endpoints which allows students and teachers to create personal study timetables.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Lectures Timetable",
+			"item": [
+				{
+					"name": "Fetch All The Lecture Timetables That Belongs To A School",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/lecture_timetables/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"lecture_timetables",
+								""
+							]
+						},
+						"description": "This endpoint can be used to see all the lecture timetables for a specific school."
+					},
+					"response": [
+						{
+							"name": "Fetch All The Lecture Timetables That Belongs To A School",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/lecture_timetables/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"lecture_timetables",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "998"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jun 2020 09:31:44 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1591007461"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"da5-evzCOpsFvgzm/5DuwYSx6kWkyz0\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved all the lecture timetables for your school\",\n    \"results\": 2,\n    \"data\": [\n        {\n            \"category\": \"Lecture\",\n            \"_id\": \"5ed4118f065a93196873ef91\",\n            \"class\": \"SS 2\",\n            \"form_teacher\": \"bbatundeobasola39\",\n            \"class_prefect\": \"amandababatunde68\",\n            \"monday\": [\n                {\n                    \"_id\": \"5ed4118f065a93196873ef92\",\n                    \"subject\": \"Biology\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"bukolaayantola18\"\n                },\n                {\n                    \"_id\": \"5ed4118f065a93196873ef93\",\n                    \"subject\": \"Basic Technology\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"bukolaayantola18\"\n                }\n            ],\n            \"tuesday\": [\n                {\n                    \"_id\": \"5ed4118f065a93196873ef94\",\n                    \"subject\": \"Chemistry\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"godswillafolabi76\"\n                },\n                {\n                    \"_id\": \"5ed4118f065a93196873ef95\",\n                    \"subject\": \"Chemistry\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"godswillafolabi76\"\n                }\n            ],\n            \"wednesday\": [\n                {\n                    \"_id\": \"5ed4118f065a93196873ef96\",\n                    \"subject\": \"Hausa Language\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"amaraokoli25\"\n                },\n                {\n                    \"_id\": \"5ed4118f065a93196873ef97\",\n                    \"subject\": \"Mathematics\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"amaraokoli25\"\n                }\n            ],\n            \"thursday\": [\n                {\n                    \"_id\": \"5ed4118f065a93196873ef98\",\n                    \"subject\": \"Physics\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"amakemmuoma15\"\n                },\n                {\n                    \"_id\": \"5ed4118f065a93196873ef99\",\n                    \"subject\": \"Physics\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"amakemmuoma15\"\n                }\n            ],\n            \"friday\": [\n                {\n                    \"_id\": \"5ed4118f065a93196873ef9a\",\n                    \"subject\": \"Accounting\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"bbatundeobasola39\"\n                },\n                {\n                    \"_id\": \"5ed4118f065a93196873ef9b\",\n                    \"subject\": \"Accounting\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"bbatundeobasola39\"\n                }\n            ],\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"__v\": 0\n        },\n        {\n            \"category\": \"Lecture\",\n            \"_id\": \"5ed4cae6e97d5319ecd6307c\",\n            \"class\": \"SS 3\",\n            \"form_teacher\": \"bbatundeobasola39\",\n            \"class_prefect\": \"amandababatunde68\",\n            \"monday\": [\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd6307d\",\n                    \"subject\": \"Biology\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"bukolaayantola18\"\n                },\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd6307e\",\n                    \"subject\": \"Basic Technology\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"bukolaayantola18\"\n                }\n            ],\n            \"tuesday\": [\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd6307f\",\n                    \"subject\": \"Chemistry\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"godswillafolabi76\"\n                },\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63080\",\n                    \"subject\": \"Chemistry\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"godswillafolabi76\"\n                }\n            ],\n            \"wednesday\": [\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63081\",\n                    \"subject\": \"Hausa Language\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"amaraokoli25\"\n                },\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63082\",\n                    \"subject\": \"Mathematics\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"amaraokoli25\"\n                }\n            ],\n            \"thursday\": [\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63083\",\n                    \"subject\": \"Physics\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"amakemmuoma15\"\n                },\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63084\",\n                    \"subject\": \"Physics\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"amakemmuoma15\"\n                }\n            ],\n            \"friday\": [\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63085\",\n                    \"subject\": \"Accounting\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"8am\",\n                    \"stop\": \"10am\",\n                    \"tutor\": \"bbatundeobasola39\"\n                },\n                {\n                    \"_id\": \"5ed4cae6e97d5319ecd63086\",\n                    \"subject\": \"Accounting\",\n                    \"amountOfLectureTime\": \"2 hours\",\n                    \"start\": \"11am\",\n                    \"stop\": \"1pm\",\n                    \"tutor\": \"bbatundeobasola39\"\n                }\n            ],\n            \"school\": \"5ecb08dfd2595416f0dc9977\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Lecture Timetable For A Specific Class",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed503549d420d1d3849a079/lecture_timetable",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed503549d420d1d3849a079",
+								"lecture_timetable"
+							]
+						},
+						"description": "This endpoint can be used to fetch a lecture timetable for a specific class in a particular school."
+					},
+					"response": [
+						{
+							"name": "Fetch Lecture Timetable For A Specific Class",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed41169065a93196873ef90/lecture_timetable",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"schools",
+										"5ecb08dfd2595416f0dc9977",
+										"classes",
+										"5ed41169065a93196873ef90",
+										"lecture_timetable"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "998"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jun 2020 10:03:58 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1591009291"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"707-u+CP/C9/uiJN+4KrocGDfZQWOYc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully retrieved the lecture timetable for this class.\",\n    \"results\": 1,\n    \"data\": {\n        \"category\": \"Lecture\",\n        \"_id\": \"5ed4118f065a93196873ef91\",\n        \"class\": \"SS 2\",\n        \"form_teacher\": \"bbatundeobasola39\",\n        \"class_prefect\": \"amandababatunde68\",\n        \"monday\": [\n            {\n                \"_id\": \"5ed4118f065a93196873ef92\",\n                \"subject\": \"Biology\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"8am\",\n                \"stop\": \"10am\",\n                \"tutor\": \"bukolaayantola18\"\n            },\n            {\n                \"_id\": \"5ed4118f065a93196873ef93\",\n                \"subject\": \"Basic Technology\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"11am\",\n                \"stop\": \"1pm\",\n                \"tutor\": \"bukolaayantola18\"\n            }\n        ],\n        \"tuesday\": [\n            {\n                \"_id\": \"5ed4118f065a93196873ef94\",\n                \"subject\": \"Chemistry\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"8am\",\n                \"stop\": \"10am\",\n                \"tutor\": \"godswillafolabi76\"\n            },\n            {\n                \"_id\": \"5ed4118f065a93196873ef95\",\n                \"subject\": \"Chemistry\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"11am\",\n                \"stop\": \"1pm\",\n                \"tutor\": \"godswillafolabi76\"\n            }\n        ],\n        \"wednesday\": [\n            {\n                \"_id\": \"5ed4118f065a93196873ef96\",\n                \"subject\": \"Hausa Language\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"8am\",\n                \"stop\": \"10am\",\n                \"tutor\": \"amaraokoli25\"\n            },\n            {\n                \"_id\": \"5ed4118f065a93196873ef97\",\n                \"subject\": \"Mathematics\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"11am\",\n                \"stop\": \"1pm\",\n                \"tutor\": \"amaraokoli25\"\n            }\n        ],\n        \"thursday\": [\n            {\n                \"_id\": \"5ed4118f065a93196873ef98\",\n                \"subject\": \"Physics\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"8am\",\n                \"stop\": \"10am\",\n                \"tutor\": \"amakemmuoma15\"\n            },\n            {\n                \"_id\": \"5ed4118f065a93196873ef99\",\n                \"subject\": \"Physics\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"11am\",\n                \"stop\": \"1pm\",\n                \"tutor\": \"amakemmuoma15\"\n            }\n        ],\n        \"friday\": [\n            {\n                \"_id\": \"5ed4118f065a93196873ef9a\",\n                \"subject\": \"Accounting\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"8am\",\n                \"stop\": \"10am\",\n                \"tutor\": \"bbatundeobasola39\"\n            },\n            {\n                \"_id\": \"5ed4118f065a93196873ef9b\",\n                \"subject\": \"Accounting\",\n                \"amountOfLectureTime\": \"2 hours\",\n                \"start\": \"11am\",\n                \"stop\": \"1pm\",\n                \"tutor\": \"bbatundeobasola39\"\n            }\n        ],\n        \"school\": \"5ecb08dfd2595416f0dc9977\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Lecture Timetable For A Specific Class",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"tuesday\": [\r\n            {\r\n                \"_id\": \"5ed4118f065a93196873ef92\",\r\n                \"subject\": \"Biology\",\r\n                \"amountOfLectureTime\": \"2 hours\",\r\n                \"start\": \"8am\",\r\n                \"stop\": \"10am\",\r\n                \"tutor\": \"bukolaayantola18\"\r\n            },\r\n            {\r\n                \"_id\": \"5ed4118f065a93196873ef93\",\r\n                \"subject\": \"Basic Technology\",\r\n                \"amountOfLectureTime\": \"2 hours\",\r\n                \"start\": \"11am\",\r\n                \"stop\": \"1pm\",\r\n                \"tutor\": \"bukolaayantola18\"\r\n            }\r\n        ],\r\n        \"monday\": [\r\n            {\r\n                \"_id\": \"5ed4118f065a93196873ef94\",\r\n                \"subject\": \"Chemistry\",\r\n                \"amountOfLectureTime\": \"2 hours\",\r\n                \"start\": \"8am\",\r\n                \"stop\": \"10am\",\r\n                \"tutor\": \"godswillafolabi76\"\r\n            },\r\n            {\r\n                \"_id\": \"5ed4118f065a93196873ef95\",\r\n                \"subject\": \"Chemistry\",\r\n                \"amountOfLectureTime\": \"2 hours\",\r\n                \"start\": \"11am\",\r\n                \"stop\": \"1pm\",\r\n                \"tutor\": \"godswillafolabi76\"\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed503549d420d1d3849a079/lecture_timetable",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed503549d420d1d3849a079",
+								"lecture_timetable"
+							]
+						},
+						"description": "This endpoint can be used by a school administrator or form teacher to adjust the lecture timetable of a specific class."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Lecture Timetable For A Class",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/classes/5ed503549d420d1d3849a079/lecture_timetable",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"classes",
+								"5ed503549d420d1d3849a079",
+								"lecture_timetable"
+							]
+						},
+						"description": "This endpoint can be used by a school administrator or a form-teacher to delete the lecture timetable for a specific class."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder consists of series of endpoints which can be used by schools to create lecture timetables for classes.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Teacher Timetable",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"staff_timetables"
+							]
+						},
+						"description": "Returns the timetables of every staff in a school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables/staff/amakemmuoma15",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables/staff/amakemmuoma15",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"staff_timetables",
+								"staff",
+								"amakemmuoma15"
+							]
+						},
+						"description": "Deletes teacher timetable of a staff"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"staffUsername\": \"samuelbbatunde14\",\n\t\"staffCategory\": \"Staff\",\n\t\"monday\": [\n\t\t{\t\"class\": \"SS 2\", \"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"8am\", \"stop\": \"10am\"},\n\t\t{\"class\": \"SS 3\", \"subject\": \"Physics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"11am\", \"stop\": \"1pm\"}\n\t\t],\n\t\"tuesday\": [\n\t\t{\"class\": \"SS 1\",\"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"8am\", \"stop\": \"10am\"},\n\t\t{\"class\": \"SS 2\", \"subject\": \"Physics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"1pm\", \"stop\": \"3pm\"}\n\t\t],\n\t\"wednesday\": [\n\t\t{\"class\": \"SS 3\", \"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"8am\", \"stop\": \"10am\"},\n\t\t{\"class\": \"Basic 3\", \"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"11am\", \"stop\": \"1pm\"}\n\t\t],\n\t\"thursday\": [\n\t\t{\"class\": \"Basic 3\", \"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"8am\", \"stop\": \"10am\"},\n\t\t{\"class\": \"SS 3\", \"subject\": \"Physics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"11am\", \"stop\": \"1pm\"}\n\t\t],\n\t\"friday\": [\n\t\t{\"class\": \"SS 3\", \"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"8am\", \"stop\": \"10am\"},\n\t\t{\"class\": \"SS 2\",\"subject\": \"Mathematics\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"11am\", \"stop\": \"1pm\"}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"staff_timetables"
+							]
+						},
+						"description": "Creates a timetable for a staff of a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables/staff/amakemmuoma15",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables/staff/amakemmuoma15",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"staff_timetables",
+								"staff",
+								"amakemmuoma15"
+							]
+						},
+						"description": "Retrieves timetable of a specific teacher"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables/staff/amakemmuoma15",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"monday\": [\n\t\t{\t\"class\": \"SS 2\", \"subject\": \"Chemistry\", \"amountOfLectureTime\": \"1 hour\", \"start\": \"8am\", \"stop\": \"9am\"},\n\t\t{\"class\": \"SS 3\", \"subject\": \"Chemistry\", \"amountOfLectureTime\": \"2 hours\", \"start\": \"11am\", \"stop\": \"1pm\"}\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/schools/5ecb08dfd2595416f0dc9977/staff_timetables/staff/amakemmuoma15",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"staff_timetables",
+								"staff",
+								"amakemmuoma15"
+							]
+						},
+						"description": "Update teacher timetable for a specific staff"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

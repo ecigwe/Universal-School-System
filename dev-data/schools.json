@@ -1,0 +1,101 @@
+[
+    {
+        "_id": "5ecb08dfd2595416f0dc9977",
+        "isSubscribed": false,
+        "admin": "funshoikokwu90",
+        "name": "Hopebay College",
+        "address": "30 Ezekiel Street, Satelite Town, Rivers",
+        "population": 2756,
+        "email": "hopebay@yahoo.com",
+        "phoneNumber": "+2349032745059",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc9976",
+        "isSubscribed": false,
+        "admin": "amakesolarin63",
+        "name": "Community High School Ojo",
+        "address": "10 Olanrewaju Street, Satelite Town, Lagos",
+        "population": 2509,
+        "email": "community-high@yahoo.com",
+        "phoneNumber": "+2348064745859",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc9979",
+        "isSubscribed": false,
+        "admin": "emekasolarin88",
+        "name": "Meadow Academy",
+        "address": "7 Falomo Road, Ijaiye, Ogun",
+        "population": 7644,
+        "email": "info@meadowacademy.org",
+        "phoneNumber": "+2348175309861",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc9975",
+        "isSubscribed": false,
+        "admin": "bukolaayantola18",
+        "name": "Marist Comprehensive",
+        "address": "1057 Agege Road, Agege, Lagos",
+        "population": 4599,
+        "email": "marist@gmail.com",
+        "phoneNumber": "+2348065753440",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc9978",
+        "isSubscribed": false,
+        "admin": "ngozicole43",
+        "name": "Atlantic Hall",
+        "address": "7 Balogun Street, Lekki, Lagos",
+        "population": 7469,
+        "email": "atlantic-hall@yahoo.com",
+        "phoneNumber": "+2347037345059",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc997a",
+        "isSubscribed": false,
+        "admin": "imaobongnwankwo13",
+        "name": "Higher Achievers",
+        "address": "7 Cole Street Off Ajegunle Bus-Stop , Ikeja, Lagos",
+        "population": 3584,
+        "email": "higher_achievers@gmail.org",
+        "phoneNumber": "+2348175304561",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc997b",
+        "isSubscribed": false,
+        "admin": "echezonaimitiari71",
+        "name": "Crescent College",
+        "address": "6 Morenikeji Street, Maraba, Kwara",
+        "population": 6545,
+        "email": "hello@crescent.net",
+        "phoneNumber": "+2348175665861",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc997d",
+        "isSubscribed": false,
+        "admin": "emekabbatunde80",
+        "name": "Kings College",
+        "address": "55 Obi Street New Housing Estate, Onitsha, Anambra",
+        "population": 5098,
+        "email": "helpdesk@kgc.com",
+        "phoneNumber": "+2349072652148",
+        "imageUrl": "https://example.com/ex.jpg"
+    },
+    {
+        "_id": "5ecb08dfd2595416f0dc997c",
+        "isSubscribed": false,
+        "admin": "chiamakanwafor80",
+        "name": "Notre Girls College",
+        "address": "55 Lamido Street Ahmed Musa GRA, Gwagwalada, Abuja",
+        "population": 8476,
+        "email": "ngc@gmail.com",
+        "phoneNumber": "+2347084765431",
+        "imageUrl": "https://example.com/ex.jpg"
+    }
+]

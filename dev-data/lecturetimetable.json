@@ -1,0 +1,82 @@
+{
+    "monday": [
+        {
+            "subject": "Biology",
+            "amountOfLectureTime": "2 hours",
+            "start": "8am",
+            "stop": "10am",
+            "tutor": "bukolaayantola18"
+        },
+        {
+            "subject": "Basic Technology",
+            "amountOfLectureTime": "2 hours",
+            "start": "11am",
+            "stop": "1pm",
+            "tutor": "bukolaayantola18"
+        }
+    ],
+    "tuesday": [
+        {
+            "subject": "Chemistry",
+            "amountOfLectureTime": "2 hours",
+            "start": "8am",
+            "stop": "10am",
+            "tutor": "godswillafolabi76"
+        },
+        {
+            "subject": "Chemistry",
+            "amountOfLectureTime": "2 hours",
+            "start": "11am",
+            "stop": "1pm",
+            "tutor": "godswillafolabi76"
+        }
+    ],
+    "wednesday": [
+        {
+            "subject": "Hausa Language",
+            "amountOfLectureTime": "2 hours",
+            "start": "8am",
+            "stop": "10am",
+            "tutor": "amaraokoli25"
+        },
+        {
+            "subject": "Mathematics",
+            "amountOfLectureTime": "2 hours",
+            "start": "11am",
+            "stop": "1pm",
+            "tutor": "amaraokoli25"
+        }
+    ],
+    "thursday": [
+        {
+            "subject": "Physics",
+            "amountOfLectureTime": "2 hours",
+            "start": "8am",
+            "stop": "10am",
+            "tutor": "amakemmuoma15"
+        },
+        {
+            "subject": "Physics",
+            "amountOfLectureTime": "2 hours",
+            "start": "11am",
+            "stop": "1pm",
+            "tutor": "amakemmuoma15"
+        }
+    ],
+    "friday": [
+        {
+            "subject": "Accounting",
+            "amountOfLectureTime": "2 hours",
+            "start": "8am",
+            "stop": "10am",
+            "tutor": "bbatundeobasola39"
+        },
+        {
+            "subject": "Accounting",
+            "amountOfLectureTime": "2 hours",
+            "start": "11am",
+            "stop": "1pm",
+            "tutor": "bbatundeobasola39"
+        }
+    ]
+}

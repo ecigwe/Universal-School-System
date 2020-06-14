@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "aac3989d-71ef-4512-a9b6-6992bdd3a7fa",
+		"name": "Payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9979/account_details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Meadow Academy\",\n\t\"email\": \"info@meadowacademy.org\",\n\t\"SECRET_KEY\": \"sk_test_6ce39339bd6e5bed6ac66509cc14731f9630744b\",\n\t\"amount_payable\": 30000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9979/account_details",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9979",
+								"account_details"
+							]
+						},
+						"description": "Creates account details for a school. This includes the school's paystack secret"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/account_details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/account_details",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"account_details"
+							]
+						},
+						"description": "Retrieves account details of a specific school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/account_details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/account_details",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"account_details"
+							]
+						},
+						"description": "retrieves acoount details of all schools"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/account_details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"hopebay@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/account_details",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"account_details"
+							]
+						},
+						"description": "Updates account details of a specific school\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/account_details",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/account_details",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"account_details"
+							]
+						},
+						"description": "Deltes account details of a specific school"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payment verification",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/v1/payments/complete?trxref=54gchax14t&reference=54gchax14t",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"paymentFor\": \"Subscription\",\n\"school\": \"5ecb08dfd2595416f0dc9977\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/payments/complete?trxref=54gchax14t&reference=54gchax14t",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"complete"
+							],
+							"query": [
+								{
+									"key": "trxref",
+									"value": "54gchax14t"
+								},
+								{
+									"key": "reference",
+									"value": "54gchax14t"
+								}
+							]
+						},
+						"description": "Verifies payment made by schools or students for fees or purchase of items."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payment Reciepts",
+			"item": [
+				{
+					"name": "{{URL}}/api/v1/payments/schools/reciepts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/reciepts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"reciepts"
+							]
+						},
+						"description": "Retrieves subscription reciepts for all schools. Accessible by the admin only"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/reciepts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/reciepts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"reciepts"
+							]
+						},
+						"description": "Retrieves subscription reciepts for a particular school"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/reciepts/5eda765dc0141131345b13c9",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/reciepts/5eda765dc0141131345b13c9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"reciepts",
+								"5eda765dc0141131345b13c9"
+							]
+						},
+						"description": "Deltes a specific payment reciept"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/reciepts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/reciepts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"reciepts"
+							]
+						},
+						"description": "Retrieves payment reciepts for all payment of fees in a school by students"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/reciepts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/reciepts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecb1917ef9ab21050ca1f7b",
+								"reciepts"
+							]
+						},
+						"description": "Retrieves payment reciepts of a particular student for fees payment."
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/reciepts/5eda92fe06a6d11834d6af5f",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/reciepts/5eda92fe06a6d11834d6af5f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecb1917ef9ab21050ca1f7b",
+								"reciepts",
+								"5eda92fe06a6d11834d6af5f"
+							]
+						},
+						"description": "Deletes a particulay fees payment reciept of a student"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/items/reciepts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/items/reciepts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecb1917ef9ab21050ca1f7b",
+								"items",
+								"reciepts"
+							]
+						},
+						"description": "Retrieves reciepts for past purchases made by a student"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/items/5edaa64f4204aa2184a103e2/reciepts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/items/5edaa64f4204aa2184a103e2/reciepts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecb1917ef9ab21050ca1f7b",
+								"items",
+								"5edaa64f4204aa2184a103e2",
+								"reciepts"
+							]
+						},
+						"description": "Retrieves a specific reciept for the purchase of a specific item by a student."
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/items/reciepts/5edaa64f4204aa2184a103e2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/payments/schools/5ecb08dfd2595416f0dc9977/students/5ecb1917ef9ab21050ca1f7b/items/reciepts/5edaa64f4204aa2184a103e2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"schools",
+								"5ecb08dfd2595416f0dc9977",
+								"students",
+								"5ecb1917ef9ab21050ca1f7b",
+								"items",
+								"reciepts",
+								"5edaa64f4204aa2184a103e2"
+							]
+						},
+						"description": "Deletes a particular purchase reciept."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
