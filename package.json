@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/IMMANUEL5015/Universal-School-System#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.21.0",
     "compression": "^1.7.4",
